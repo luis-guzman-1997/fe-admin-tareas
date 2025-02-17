@@ -1,0 +1,84 @@
+
+<div class="row auth-wrapper auth-content">
+    <div class="col-md-8 auth-bg">
+      <span class="r"></span>
+      <div class="card">
+      <div class="card-body text-center">
+          <div class="text-center">
+              <i class="feather icon-user-plus auth-icon"></i>
+            <h3>Registrate</h3>
+          </div>
+          <div>
+            <form>
+              <div class="row">
+                <div class="form-group col-md-6 ">
+                  <label for="inputUsuario">Nombre<app-required-char /></label>
+                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp"
+                    placeholder="Ingresa tu Usuario" />
+                </div>
+                <div class="form-group col-md-6 ">
+                  <label for="inputCorreo">Correo Electrónico<app-required-char /></label>
+                  <input type="email" class="form-control" id="inputCorreo" aria-describedby="emailHelp"
+                    placeholder="Ingresa tu correo electrónico" />
+                </div>
+              </div>
+    
+              <div class="row">
+    
+                <div class="form-group col-md-4 ">
+                  <label for="inputUsuario">Usuario<app-required-char /></label>
+                  <input type="text" class="form-control" id="inputUsuario" aria-describedby="emailHelp"
+                    placeholder="Ingresa tu Usuario" />
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="inputContrasenia">Contraseña<app-required-char /></label>
+                  <div class="input-group">
+                    <input id="inputContrasenia" [type]="showPassword ? 'text' : 'password'" class="form-control"
+                      placeholder="Contraseña" aria-describedby="validationPassword" required />
+                    <button id="btnContrasenia" class="input-group-text text-secondary" tooltip="{{msjContrasenia}}"
+                      [options]="optionTooltips" (click)="togglePasswordVisibility('pass')"> 
+                      <i [class]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i></button>
+                  </div>
+                </div>
+    
+    
+                <div class="form-group col-md-4">
+                  <label for="inputContraseniaRep">Confirmación de Contraseña<app-required-char /></label>
+                  <div class="input-group">
+                    <input id="inputContraseniaRep" [type]="showPasswordRep ? 'text' : 'password'" class="form-control"
+                      id="validationTooltipUsername" placeholder="Vuelve a ingresar la contraseña"
+                      aria-describedby="validationPasswordRep" required />
+                    <button id="btnContraseniaRep" class="input-group-text text-secondary" tooltip="{{msjContraseniaRep}}"
+                      [options]="optionTooltips" (click)="togglePasswordVisibility('passRep')"> 
+                      <i [class]="showPasswordRep ? 'fas fa-eye-slash' : 'fas fa-eye'"></i></button>
+                  </div>
+                </div>
+    
+              </div>
+            </form>
+          </div>
+    
+          <div class="row text-center">
+            <div>
+              <div class="checkbox checkbox-fill d-inline">
+                <input type="checkbox" name="checkbox-fill-1" id="checkbox-fill-1" checked="" />
+                <label for="checkbox-fill-1" class="cr">Estoy de acuerdo con los <a href="#">términos</a></label>
+              </div>
+            </div>
+            <div>
+              <br>
+              <button class="btn btn-primary shadow-2 mb-4">Registrarme</button>
+              <p class="mb-0 text-muted">
+                ¿Ya tienes una cuenta?
+                <a [routerLink]="['/auth/login']">Inicia Sesión</a>
+              </p>
+            </div>
+          </div>
+        </div>   
+    </div> 
+      <span class="r"></span>
+    </div>
+  </div>
+  
+  
+  

@@ -1,0 +1,29 @@
+<div class="card">
+    <div class="card-body">
+        <h2 class="card-header">Tareas Por Hacer</h2>
+        <p class="text-end"><i class="fa-regular fa-pen-to-square"></i> Tareas 25</p>
+
+
+        <div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Revisión de Spring 25</h4>
+                    <p class="card-text">Se realiza la revisión de spring para la etapa de desarrollo</p>
+                    <div class="row">
+                        <a class="col-6 "><i class="fa-solid fa-square-minus text-danger fa-lg"
+                                tooltip="{{msjEliminarTarea}}" [options]="optionTooltips"></i></a>
+                        <div class="col-6 text-end">
+                            <a ><i class="fa-solid fa-angles-left text-primary fa-lg"
+                            tooltip="{{msjRegresarEstado}}" [options]="optionTooltips"></i></a> 
+                            <span> | </span>
+                            <a ><i class="fa-solid fa-angles-right text-success fa-lg"
+                                tooltip="{{msjCambioEstado}}" [options]="optionTooltips"></i></a>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        
+    </div>
+</div>
