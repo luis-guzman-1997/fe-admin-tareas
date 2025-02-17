@@ -15,7 +15,7 @@ export class CardComponent {
     'hideDelay': 5
   }
 
-  @input
+  //@input
 
   msjEliminarTarea: string = "Eliminar Tarea";
   msjRegresarEstado: string = "Regresar al estado anterior";
